@@ -4,9 +4,15 @@ public class Robot {
 
 	//atributos
 	private String nombre;
-	private int puntosVida;
-	private int ataque;
-	private int defensa;
+	private int puntosVida=100;
+	private int ataque = (int)(Math.random()*100+1);
+	private int defensa = (int)(Math.random()*40+1);
+	
+	//constructor
+	public Robot (String nombre, int puntosVida) {
+		this.nombre = nombre;
+		this.puntosVida = puntosVida;
+	}
 	
 	//getters y setters
 	public String getNombre() {

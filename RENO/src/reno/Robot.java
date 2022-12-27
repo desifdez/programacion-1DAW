@@ -5,8 +5,8 @@ public class Robot {
 	//atributos
 	private String nombre;
 	private int puntosVida=100;
-	private int ataque = (int)(Math.random()*100+1);
-	private int defensa = (int)(Math.random()*40+1);
+	private int ataque = (int)(Math.random()*20+1);
+	private int defensa = (int)(Math.random()*100+1);
 	
 	//constructor
 	public Robot (String nombre, int puntosVida) {

@@ -12,6 +12,51 @@ public class Start {
 		//imprimir
 		System.out.println(robotSona);
 		System.out.println(robotMarvin);
+		
+		//batalla
+		while (robotSona.getPuntosVida() > 0 && robotMarvin.getPuntosVida() > 0) {
+			while (robotSona.getPuntosVida() >
+			0) {
+					if (robotSona.getAtaque() > robotMarvin.getDefensa()) {
+						robotMarvin.puntosVida -= robotSona.getAtaque();
+					}
+					if (robotSona.getAtaque() < robotMarvin.getDefensa()) {
+						robotSona.puntosVida -= robotMarvin.getDefensa();
+					}
+					if (robotSona.getAtaque() == robotMarvin.getDefensa()) {
+						
+					}
+					System.out.println("____________________________________________________________________________");
+					System.out.println ("TURNO DE SONA");
+					System.out.println ("El robot Sona ha atacado: "+ robotSona.getAtaque());		
+					System.out.println ("El robot Marvin se ha defendido: "+ robotMarvin.getDefensa());	
+					System.out.println ("El robot Sona tiene una vida de: "+ robotSona.getPuntosVida());					
+					System.out.println ("El robot Marvin tiene vida: "+ robotMarvin.getPuntosVida());					
+			}
+	
+			while (robotMarvin.getPuntosVida() > 0)	{	
+					if (robotMarvin.getAtaque() > robotSona.getDefensa()) {
+						robotSona.puntosVida -= robotMarvin.getAtaque();				
+					}
+					if (robotMarvin.getAtaque() < robotSona.getDefensa()) {
+						robotMarvin.puntosVida -= robotSona.getDefensa();
+					}
+					if (robotMarvin.getAtaque() == robotSona.getDefensa()) {
+						
+					}
+					System.out.println("____________________________________________________________________________");
+					System.out.println ("TURNO DE MARVIN");
+					System.out.println ("El robot Marvin ha atacado: "+ robotMarvin.getAtaque());		
+					System.out.println ("El robot Sona se ha defendido: "+ robotSona.getDefensa());	
+					System.out.println ("El robot Marvin tiene una vida de: "+ robotMarvin.getPuntosVida());					
+					System.out.println ("El robot Sona tiene vida: "+ robotSona.getPuntosVida());
+			}
+		}
+		System.out.println("------------------------------------------------------------------------------");
+		System.out.println("FIN DE LA BATALLA");
+		System.out.println ("El robot Sona tiene una vida de = "+ robotSona.getPuntosVida());
+		System.out.println ("El robot Marvin tiene una vida de = "+ robotMarvin.getPuntosVida());
+		System.out.println("------------------------------------------------------------------------------");
 	}
 
 }

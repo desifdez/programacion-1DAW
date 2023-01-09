@@ -1,7 +1,5 @@
 package reno;
 
-import java.util.Random;
-
 public class Robot {
 
 	//atributos
